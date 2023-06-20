@@ -1,16 +1,16 @@
 import './styles.css';
 
-function Welcome() {
+function HomePage() {
   return (
     <body>
-      <header className="Header1">
+      <header className="start_tracking">
           Start tracking today
       </header>
-        <p className="NormalText">
+        <p className="click_anywhere">
           Click anywhere to continue
         </p>
     </body>
   );
 }
 
-export default Welcome;
+export default HomePage;
