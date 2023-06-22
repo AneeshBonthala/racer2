@@ -24,7 +24,8 @@ const Background = () => {
                 background: { 
                     color: { 
                         value: "#0C146A", 
-                    }, 
+                    },
+
                 },
                 fpsLimit: 120,
                 interactivity: {

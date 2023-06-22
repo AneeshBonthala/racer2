@@ -1,28 +1,34 @@
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Background from "./Background.js";
 import { loadFull } from "tsparticles";
 import './styles.css';
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import Join from "./Join.js"
+
+
+const PopUp = () => {
+  return
+}
+
 
 const HomePage = () => {
-  const handleClick = () => {
-    console.log('mouse click');
-  }
+  const [join, setJoin] = useState(false);
     return (
-      <body onClick={handleClick}>
+      <div className="welcome_container" onClick={() => setJoin(!join)}>
         <Background></Background>
-        <header className="start_tracking">
+        {join && <Join show={true}></Join>}
+        <p className="start_tracking">
           <motion.div
             whileHover={{ scale: 1.2, opacity: 0.5 }}
           >Start tracking today
           </motion.div>
-        </header>
+        </p>
         <p className="click_here">
           <motion.div
             whileHover={{ scale: 1.1, opacity: 0.5 }}
-          >Click here to continue</motion.div>
+          >Click anywhere to continue</motion.div>
         </p>
-      </body>
+      </div>
     );
 };
 
