@@ -14,9 +14,9 @@ const PopUp = () => {
 const HomePage = () => {
   const [join, setJoin] = useState(false);
     return (
-      <div className="welcome_container" onClick={() => setJoin(!join)}>
-        <Background></Background>
-        {join && <Join show={true}></Join>}
+      <div className="welcome_container" onClick={() => setJoin(true)}>
+        <Background allowTouch="true"></Background>
+        {join && <Join></Join>}
         <p className="start_tracking">
           <motion.div
             whileHover={{ scale: 1.2, opacity: 0.5 }}
